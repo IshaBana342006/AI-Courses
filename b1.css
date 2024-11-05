@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(12, 12, 12);
+    margin: 0px;
+    height: 1800px;
+}
+.div1{
+    background-color: rgb(142, 87, 87);
+    height: 100px;
+    width: 30%;
+    position: absolute;
+    top: 120px;
+    left: 200px;
+right: 60px;
+bottom: 10px;
+}
+.div2{
+    background-color: rgb(143, 197, 62);
+    height: 100px;
+    width: 30%;
+    position: sticky;
+    top: 0px;
+}
+.div3{
+    background-color: rgb(37, 209, 194);
+    height: 100px;
+    width: 30%;
+    position: fixed;
+    top: 250px;
+    left: 350px;
+
+}
