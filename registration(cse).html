@@ -7,14 +7,15 @@
     <fieldset>
         <form>
             <h1 style="color: white; text-align: center;">Registration Form</h1>
-            <h2 style="color: white;"><b>Full Name:</b></h2><input type="text" placeholder="First Name"><br><br>
-            <input type="text" placeholder="Last Name">
-            <h2 style="color: white;"><b>Contact:</b></h2>
-            <input type="text" placeholder="Phone No."><br><br>
-            <input type="text" placeholder="Email Id.">
-            <h2 style="color: white;"><b>Address:</b></h2><textarea></textarea>
-            <h2 style="color: white;"><b>Select Course:</b></h2>
-            <select name="courses">
+            <h2 style="color: white;"><b>Full Name: <span style="color: red;">*</span></b></h2><input id="fname" type="text" placeholder="First Name"><br><br>
+            
+            <input id="lname" type="text" placeholder="Last Name">
+            <h2 style="color: white;"><b>Contact: <span style="color: red;">*</span></b></h2>
+            <input id="pn" type="text" placeholder="Phone No."><br><br>
+            <input id="email" type="text" placeholder="Email Id.">
+            <h2 style="color: white;"><b>Address: <span style="color: red;">*</span></b></h2><textarea id="address"></textarea>
+            <h2 style="color: white;"><b>Select Course:<span style="color: red;">*</span></b></h2>
+            <select id="course" name="courses">
                 <option value="..">select </option>
                 <option value="..">Machine learning</option>
                 <option value="..">Natural Language Processing</option>
@@ -26,10 +27,35 @@
                 <option value="..">AI Tools And Frameworks</option>
                 <option value="..">AI Project Development</option>
              </select><br><br>
-             <button>Submit</button>
+             <button onclick="checking()">Submit</button>
+             
             
         </form>
     </fieldset>
+
+    <script>
+
+        function checking(){
+            fname = document.getElementById("fname").value
+            lname = document.getElementById("lname").value
+            pn = document.getElementById("pn").value
+            email = document.getElementById("email").value
+            address = document.getElementById("address").value
+            course = document.getElementById("course").value
+            
+
+
+
+            if (fname == "" | lname == "" | pn == "" | email == "" | address == "" | course == ""){
+                alert("Fill every form")
+            }
+            else{
+                alert("Succesfull")
+            }
+    }
+
+        
+    </script>
     
 </body>
 </html>
